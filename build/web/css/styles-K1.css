@@ -1,0 +1,111 @@
+/* 📐 Estructura de layout principal */
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 🔲 SideNav */
+.sidenav-container {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 64px;
+  height: calc(100vh - 64px);
+  background-color: #f4f4f4;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 998;
+}
+
+.sidenav-container:hover {
+  width: 200px;
+  padding-left: 10px;
+}
+
+.sidenav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav-links li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidenav-links li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.sidenav-links li span {
+  display: none;
+  white-space: nowrap;
+}
+
+.sidenav-container:hover .sidenav-links li span {
+  display: inline;
+}
+
+/* 🔳 TopNav */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 Centrado horizontal */
+  padding-left: 64px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.brand-logo {
+  display: flex;
+  align-items: center;        /* ✅ Centra verticalmente el texto con el ícono */
+  justify-content: center;    /* ✅ Centra horizontalmente */
+  color: black;
+  font-size: 1.6rem;
+  text-decoration: none;
+  height: 100%;
+}
+
+.brand-logo img {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;     /* ✅ El truco clave */
+}
+
+
+/* 🎯 Contenedor principal del contenido que acompaña al side */
+.main-panel {
+  margin-left: 64px;
+  width: 100%;
+}
+
+.sidenav-container:hover ~ .main-panel .navbar-content {
+  padding-left: 200px;
+}
+
+
+
+.footer-fijo {
+  position: absolute;
+  bottom: 0;
+  left: 64px; /* para alinear con el sidenav */
+  right: 0;
+}
