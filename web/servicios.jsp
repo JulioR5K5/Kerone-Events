@@ -168,5 +168,6 @@
   });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.20/fetch.min.js"></script>
 <script src="js/registrarServicio.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
